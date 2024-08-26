@@ -38,7 +38,6 @@ namespace EnemyContent
 
         private IEnumerator StartDie()
         {
-            _animator.SetTrigger("Die");
             _dieEffect.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.6f);
             _dieEffect.gameObject.SetActive(false);
