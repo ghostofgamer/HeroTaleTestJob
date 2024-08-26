@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Test
+namespace UI.Buttons
 {
     public class SpawnButton : AbstractionButton
     {
         [SerializeField] private Spawner _spawner;
 
-        public override void OnClick()
+        protected override void OnClick()
         {
             _spawner.StartSearch();
             gameObject.SetActive(false);

@@ -1,8 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8d860fd0-88ee-447f-9d6d-3519acf104f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeroTaleTestJob/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeroTaleTestJob/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeroTaleTestJob/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeroTaleTestJob/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/2D Zombie/Unity Native Animations/Baked/Zombie_Normal (default).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/2D Zombie/Unity Native Animations/Baked/Zombie_Normal (default).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/2D Zombie/Unity Native Animations/Baked/Zombie_Normal Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/2D Zombie/Unity Native Animations/Baked/Zombie_Normal Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_01.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_01.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_attack_01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_attack_01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_attack_02.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_attack_02.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_attack_03.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_attack_03.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_death_01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_death_01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_hit_01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_hit_01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_idle_01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_idle_01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_run_01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_run_01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_walk_01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetDownloaded/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Animations/Rogue_animations/Rogue_walk_01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1SceneBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1SceneBattle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2SceneBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2SceneBattle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneRelax.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneRelax.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstractionContent/AbstractHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstractionContent/AbstractHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/EnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/EnemyDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/EnemyDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnmimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnmimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/PlayerAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/AbstractionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/AbstractionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/MapSelectionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/MapSelectionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/OverBattleButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/OverBattleButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/RecoveryHealthButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/RecoveryHealthButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SpawnButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SpawnButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/StartBattleButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/StartBattleButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/WeaponChangerButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/WeaponChangerButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/AbstractScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/AbstractScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponChanger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponChanger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/BowWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/BowWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/ScytheWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/ScytheWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/AbstractionContent/AbstractHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponContent/ScytheWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponContent/BowWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/AbstractionButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Screens/AbstractScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/SpawnButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyContent/EnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyContent/EnemyDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerContent/PlayerAttack.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2lBzWgQeCmJG5RufafwY8aF91oz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -23,5 +94,31 @@
       </option>
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d860fd0-88ee-447f-9d6d-3519acf104f2" name="Default Changelist" comment="" />
+      <created>1724668293564</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724668293564</updated>
+      <workItem from="1724668304863" duration="3120000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1724672074916">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1724672074916" />
   </component>
 </project>

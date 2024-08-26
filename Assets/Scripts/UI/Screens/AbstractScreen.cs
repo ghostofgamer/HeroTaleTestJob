@@ -13,18 +13,18 @@ namespace UI.Screens
             _canvasGroup = GetComponent<CanvasGroup>();
         }
 
-        protected void Open()
-        {
-            _canvasGroup.alpha = _fullAlpha;
-            _canvasGroup.interactable = true;
-            _canvasGroup.blocksRaycasts = true;
-        }
-
         public void Close()
         {
             _canvasGroup.alpha = _zeroAlpha;
             _canvasGroup.interactable = false;
             _canvasGroup.blocksRaycasts = false;
+        }
+
+        protected void Open()
+        {
+            _canvasGroup.alpha = _fullAlpha;
+            _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
         }
     }
 }

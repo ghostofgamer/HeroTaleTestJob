@@ -1,78 +1,82 @@
 using System.Collections;
-using EnemyContent;
 using Interfaces;
 using PlayerContent;
 using SO;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyAttack : MonoBehaviour, IAttackable
+namespace EnemyContent
 {
-    [SerializeField] private EnemyData _enemyData;
-    [SerializeField] private Animator _animator;
-    [SerializeField] private GameObject _stateIdle;
-    [SerializeField] private GameObject _stateAttack;
-    [SerializeField] private Image _imageStateAttack;
-    [SerializeField] private Image _imageStateIdle;
-    [SerializeField] private float _delayAttack;
-
-    private float _delay;
-    private int _damage;
-    private Enemy _enemy;
-
-    private void OnEnable()
+    public class EnemyAttack : MonoBehaviour, IAttackable
     {
-        _stateIdle.SetActive(true);
-        _stateAttack.SetActive(false);
-    }
+        private const string AttackState = "Attack";
 
-    public void Init()
-    {
-        _enemy = GetComponent<Enemy>();
-        _delay = _enemyData.AttackDelay;
-        _damage = _enemyData.Damage;
-    }
+        [SerializeField] private EnemyData _enemyData;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private GameObject _stateIdle;
+        [SerializeField] private GameObject _stateAttack;
+        [SerializeField] private Image _imageStateAttack;
+        [SerializeField] private Image _imageStateIdle;
+        [SerializeField] private float _delayAttack;
 
-    public void ApplyAttack()
-    {
-        StartCoroutine(Attack());
-    }
+        private float _delay;
+        private int _damage;
+        private Enemy _enemy;
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.4f);
+        private float _elapsedTime = 0;
+        private float _targetFill = 1f;
+        private Coroutine _coroutine;
 
-    private IEnumerator Attack()
-    {
-        while (_enemy.Player.GetComponent<PlayerHealth>().CurrentHealth > 0)
+        private void OnEnable()
         {
-            float elapsedTime = 0;
-            _imageStateIdle.fillAmount = 0;
-            float targetFillAmount = 1f;
-            
-            while (elapsedTime < _delay)
-            {
-                elapsedTime += Time.deltaTime;
-                _imageStateIdle.fillAmount = Mathf.Lerp(0, targetFillAmount, elapsedTime / _delay);
-                yield return null;
-            }
-
-            _imageStateIdle.fillAmount = targetFillAmount;
-            _stateAttack.SetActive(true);
-            _stateIdle.SetActive(false);
-            _animator.SetTrigger("Attack");
-            yield return new WaitForSeconds(0.4f);
-            _enemy.Player.GetComponent<PlayerHealth>().TakeDamage(_damage);
-            elapsedTime = 0;
-            _imageStateAttack.fillAmount = 0;
-            targetFillAmount = 1f;
-            
-            while (elapsedTime < _delayAttack)
-            {
-                elapsedTime += Time.deltaTime;
-                _imageStateAttack.fillAmount = Mathf.Lerp(0, targetFillAmount, elapsedTime / _delayAttack);
-                yield return null;
-            }
-
-            _imageStateAttack.fillAmount = targetFillAmount;
-            _stateAttack.SetActive(false);
             _stateIdle.SetActive(true);
+            _stateAttack.SetActive(false);
+        }
+
+        public void Init()
+        {
+            _enemy = GetComponent<Enemy>();
+            _delay = _enemyData.AttackDelay;
+            _damage = _enemyData.Damage;
+        }
+
+        public void ApplyAttack()
+        {
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _coroutine = StartCoroutine(Attack());
+        }
+
+        private IEnumerator Attack()
+        {
+            while (_enemy.Player.GetComponent<PlayerHealth>().CurrentHealth > 0)
+            {
+                yield return StartCoroutine(FillImage(_imageStateIdle, _delay));
+                _stateAttack.SetActive(true);
+                _stateIdle.SetActive(false);
+                _animator.SetTrigger(AttackState);
+                yield return _waitForSeconds;
+                _enemy.Player.GetComponent<PlayerHealth>().TakeDamage(_damage);
+                yield return StartCoroutine(FillImage(_imageStateAttack, _delayAttack));
+                _stateAttack.SetActive(false);
+                _stateIdle.SetActive(true);
+            }
+        }
+
+        private IEnumerator FillImage(Image image, float delay)
+        {
+            _elapsedTime = 0;
+            image.fillAmount = 0;
+
+            while (_elapsedTime < delay)
+            {
+                _elapsedTime += Time.deltaTime;
+                image.fillAmount = Mathf.Lerp(0, _targetFill, _elapsedTime / delay);
+                yield return null;
+            }
+
+            image.fillAmount = _targetFill;
         }
     }
 }

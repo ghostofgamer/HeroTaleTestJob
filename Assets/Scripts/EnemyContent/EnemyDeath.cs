@@ -11,9 +11,11 @@ namespace EnemyContent
         [SerializeField] private EnemyData _enemyData;
         [SerializeField] private ParticleSystem _dieEffect;
         [SerializeField] private Animator _animator;
-        
+
         private Enemy _enemy;
         private int _experience;
+        private Coroutine _coroutine;
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.6f);
         
         private void OnEnable()
         {
@@ -33,13 +35,16 @@ namespace EnemyContent
 
         private void Die()
         {
-            StartCoroutine(StartDie());
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _coroutine = StartCoroutine(StartDie());
         }
 
         private IEnumerator StartDie()
         {
             _dieEffect.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.6f);
+            yield return _waitForSeconds;
             _dieEffect.gameObject.SetActive(false);
             _enemy.Spawner.StartSearch();
             _enemy.Awarding.Init(_experience);

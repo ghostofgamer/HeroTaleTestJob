@@ -11,7 +11,7 @@ namespace UI.Buttons
         [SerializeField] private Sprite _scytheSprite;
         [SerializeField] private Sprite _bowSprite;
 
-        public override void OnClick()
+        protected override void OnClick()
         {
             _playerAttack.Change();
             _icon.sprite = _playerAttack.IsScytheWeapon ? _bowSprite : _scytheSprite;

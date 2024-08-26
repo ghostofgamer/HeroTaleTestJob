@@ -11,6 +11,10 @@ namespace PlayerContent
     [RequireComponent(typeof(MainPlayer))]
     public class PlayerAttack : MonoBehaviour, IAttackable
     {
+        private const string ScytheWeapon = "ScytheWeapon";
+        private const string ScytheAttack = "ScytheAttack";
+        private const string BowAttack = "BowAttack";
+
         [SerializeField] private GameObject _stateIdle;
         [SerializeField] private GameObject _stateAttack;
         [SerializeField] private Image _imageStateAttack;
@@ -34,6 +38,10 @@ namespace PlayerContent
         private float _minLuck = 15f;
         private float _maxLuck = 35f;
         private float _factorLuck = 1;
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(2f);
+        private WaitForSeconds _waitForMoment = new WaitForSeconds(0.3f);
+        private float _elapsedTime = 0;
+        private float _targetFillAmount = 1f;
 
         private bool IsAttack { get; set; }
 
@@ -55,7 +63,7 @@ namespace PlayerContent
         {
             _weapon = _playerBag.GetWeapon(0);
             IsScytheWeapon = true;
-            _animator.SetBool("ScytheWeapon", IsScytheWeapon);
+            _animator.SetBool(ScytheWeapon, IsScytheWeapon);
             _player = GetComponent<MainPlayer>();
             _delay = _characterData.AttackDelay;
             _luck = _characterData.Luck;
@@ -95,16 +103,17 @@ namespace PlayerContent
         {
             yield return StartCoroutine(FillImage(_imageStateIdle, _delay, IsAttackState));
             IsAttackState = true;
-            _animator.SetTrigger(IsScytheWeapon ? "ScytheAttack" : "BowAttack");
+            _animator.SetTrigger(IsScytheWeapon ? ScytheAttack : BowAttack);
             _stateAttack.SetActive(true);
             _stateIdle.SetActive(false);
-            yield return new WaitForSeconds(0.3f);
+            yield return _waitForMoment;
             int random = Random.Range(0, 100);
 
             if (random <= _luck)
                 _criticalEffect.Play();
 
-            _player.Enemy.GetComponent<EnemyHealth>().TakeDamage(random <= _luck ? _weapon.Damage * _factorDamage : _weapon.Damage);
+            _player.Enemy.GetComponent<EnemyHealth>()
+                .TakeDamage(random <= _luck ? _weapon.Damage * _factorDamage : _weapon.Damage);
             yield return StartCoroutine(FillImage(_imageStateAttack, _weapon.DelayAttack, IsAttackState));
             IsAttackState = false;
             _stateAttack.SetActive(false);
@@ -116,28 +125,28 @@ namespace PlayerContent
 
         private IEnumerator FillImage(Image image, float delay, bool stateAttack)
         {
-            float elapsedTime = 0;
-            float targetFillAmount = 1f;
+            _elapsedTime = 0;
+            _targetFillAmount = 1f;
 
-            while (elapsedTime < delay)
+            while (_elapsedTime < delay)
             {
                 if (_isChange && !stateAttack)
                     yield return StartCoroutine(ChangeWeapon());
 
-                elapsedTime += Time.deltaTime;
-                image.fillAmount = Mathf.Lerp(0, targetFillAmount, elapsedTime / delay);
+                _elapsedTime += Time.deltaTime;
+                image.fillAmount = Mathf.Lerp(0, _targetFillAmount, _elapsedTime / delay);
                 yield return null;
             }
 
-            image.fillAmount = targetFillAmount;
+            image.fillAmount = _targetFillAmount;
         }
 
         private IEnumerator ChangeWeapon()
         {
             _gameObjectReload.SetActive(true);
-            yield return new WaitForSeconds(2f);
+            yield return _waitForSeconds;
             _isChange = false;
-            _animator.SetBool("ScytheWeapon", IsScytheWeapon);
+            _animator.SetBool(ScytheWeapon, IsScytheWeapon);
             _weapon = _playerBag.GetWeapon(IsScytheWeapon ? 0 : 1);
             _gameObjectReload.SetActive(false);
         }

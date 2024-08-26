@@ -15,7 +15,7 @@ namespace AbstractionContent
         public event Action<int, int> HealthChanged;
 
         protected int Health { get; private set; }
-        
+
         public int CurrentHealth { get; private set; }
 
         public void TakeDamage(int damage)
@@ -24,12 +24,15 @@ namespace AbstractionContent
                 return;
 
             CurrentHealth -= (damage - _armor);
+            CurrentHealth = Math.Clamp(CurrentHealth, 0, Health);
             _audioSource.PlayOneShot(_audioSource.clip);
             _damageEffect.Play();
             HealthChanged?.Invoke(Health, CurrentHealth);
 
             if (CurrentHealth <= 0)
+            {
                 Died?.Invoke();
+            }
         }
 
         public void HealHealth()
@@ -54,7 +57,7 @@ namespace AbstractionContent
         {
             if (value <= 0)
                 return;
-            
+
             Health += value;
         }
     }

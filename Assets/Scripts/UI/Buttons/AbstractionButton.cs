@@ -1,24 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class AbstractionButton : MonoBehaviour
+namespace UI.Buttons
 {
-    private Button _button;
-
-    private void Awake()
+    public abstract class AbstractionButton : MonoBehaviour
     {
-        _button = GetComponent<Button>();
-    }
+        private Button _button;
 
-    private void OnEnable()
-    {
-        _button.onClick.AddListener(OnClick);
-    }
+        private void Awake()
+        {
+            _button = GetComponent<Button>();
+        }
 
-    private void OnDisable()
-    {
-        _button.onClick.RemoveListener(OnClick);
-    }
+        private void OnEnable()
+        {
+            _button.onClick.AddListener(OnClick);
+        }
 
-    public abstract void OnClick();
+        private void OnDisable()
+        {
+            _button.onClick.RemoveListener(OnClick);
+        }
+
+        protected abstract void OnClick();
+    }
 }
