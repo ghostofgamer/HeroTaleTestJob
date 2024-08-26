@@ -37,6 +37,7 @@ namespace AbstractionContent
 
         public void HealHealth()
         {
+            Debug.Log(Health);
             CurrentHealth = Health;
             HealthChange(Health, CurrentHealth);
         }
